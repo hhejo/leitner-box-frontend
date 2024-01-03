@@ -5,6 +5,8 @@ function Form({ onSubmit }) {
   const [answer, setAnswer] = useState("");
   const submitHandler = (e) => {
     e.preventDefault();
+    setQuestion("");
+    setAnswer("");
     onSubmit({ question, answer });
   };
 
